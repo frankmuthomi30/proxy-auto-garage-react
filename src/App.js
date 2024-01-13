@@ -19,25 +19,22 @@ function App() {
       
       {/* Navigation Links */}
       <Link to="herosection" smooth={true} duration={500}>
-        Home
+        
       </Link>
       <Link to="servicessection" smooth={true} duration={500}>
-        Services
+        
       </Link>
       <Link to="aboutus" smooth={true} duration={500}>
-        About Us
       </Link>
       <Link to="gallery" smooth={true} duration={500}>
-        Gallery
+        
       </Link>
       <Link to="testimonials" smooth={true} duration={500}>
-        Testimonials
       </Link>
       <Link to="faqs" smooth={true} duration={500}>
-        FAQs
       </Link>
       <Link to="contacts" smooth={true} duration={500}>
-        Contacts
+        
       </Link>
 
       {/* Sections */}
