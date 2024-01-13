@@ -48,7 +48,7 @@ const Hero = () => {
           <motion.img
             src={process.env.PUBLIC_URL + "/images/hero1.jpg"}
             alt="Garage image"
-            className="w-full h-full object-cover"
+            className="rounded-lg w-full h-full object-cover"
             style={{ y }}
           />
         </div>
