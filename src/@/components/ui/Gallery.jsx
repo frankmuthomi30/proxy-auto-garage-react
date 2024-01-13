@@ -55,7 +55,7 @@ const Gallery = () => {
             <img
               src={process.env.PUBLIC_URL + image}
               alt={`Gallery Image ${index + 1}`}
-              className="w-full h-full object-cover cursor-pointer"
+              className=" rounded-lg w-full h-full object-cover cursor-pointer"
             />
           </motion.div>
         ))}
