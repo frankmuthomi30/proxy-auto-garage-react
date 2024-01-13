@@ -15,6 +15,7 @@ const images = [
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const openLightbox = (index) => {
     setSelectedImage(index);
@@ -24,21 +25,41 @@ const Gallery = () => {
     setSelectedImage(null);
   };
 
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredImages = images.filter((image) =>
+    image.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {images.map((image, index) => (
-        <motion.div
-          key={index}
-          whileHover={{ scale: 1.1 }}
-          onClick={() => openLightbox(index)}
-        >
-          <img
-            src={process.env.PUBLIC_URL + image}
-            alt={`Gallery Image ${index + 1}`}
-            className="w-full h-full object-cover cursor-pointer"
-          />
-        </motion.div>
-      ))}
+    <div className="container mx-auto p-4">
+      <div className="flex items-center justify-center mb-4">
+        <FaSearch className="text-gray-500 mr-2" />
+        <input
+          type="text"
+          placeholder="Search by image name"
+          value={searchTerm}
+          onChange={handleSearch}
+          className="border border-gray-300 rounded-md px-2 py-1 w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {filteredImages.map((image, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.1 }}
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={process.env.PUBLIC_URL + image}
+              alt={`Gallery Image ${index + 1}`}
+              className="w-full h-full object-cover cursor-pointer"
+            />
+          </motion.div>
+        ))}
+      </div>
       {selectedImage !== null && (
         <motion.div
           initial={{ opacity: 0 }}
