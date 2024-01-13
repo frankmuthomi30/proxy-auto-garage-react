@@ -1,0 +1,17 @@
+/* styles.css */
+
+/* Import the base Tailwind CSS styles */
+@import 'tailwindcss/base';
+
+/* Add your custom styles or import additional Tailwind CSS styles */
+/* For example: */
+body {
+  @apply bg-gray-100; /* Apply a Tailwind CSS utility class */
+}
+
+
+/* Import the component-specific styles */
+@import 'tailwindcss/components';
+
+/* Import the utility styles */
+@import 'tailwindcss/utilities';
