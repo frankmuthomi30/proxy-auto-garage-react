@@ -1,10 +1,10 @@
 import React from 'react';
-import { useViewportScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import { FaWrench } from 'react-icons/fa';
 
 const Hero = () => {
   // Get scroll y position
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
 
   // Create y animation for parallax effect
   const y = useTransform(scrollY, [0, 500], [0, -100]);
@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <div className="hero bg-slate-50 h-screen flex items-center justify-center text-slate-800">
-      <motion.div
+      <div
         className="container mx-auto px-4 flex flex-col md:flex-row items-center"
         initial="hidden"
         animate="visible"
@@ -45,14 +45,14 @@ const Hero = () => {
           </motion.a>
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0">
-          <motion.img
+          <img
             src={process.env.PUBLIC_URL + "/images/hero1.jpg"}
             alt="Garage image"
             className="rounded-lg w-full h-full object-cover"
             style={{ y }}
           />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

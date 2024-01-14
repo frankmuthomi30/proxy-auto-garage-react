@@ -19,7 +19,6 @@ const testimonials = [
     comment: 'As a car enthusiast, I am very particular about where I take my vehicle. Proxy Auto Garage has become my go-to place for all car repairs. Top-notch service!',
     image: '/images/vincent.png', // Add the image path for Vincent
   },
-
 ];
 
 const Testimonials = () => {
