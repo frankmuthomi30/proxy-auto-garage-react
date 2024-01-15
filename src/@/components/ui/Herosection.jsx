@@ -25,7 +25,7 @@ const Hero = () => {
       >
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 flex flex-col items-start">
           <h1 className="text-4xl md:text-6xl font-bold flex items-center justify-center md:justify-start">
-            <FaWrench className="mr-4 text-gray-900" />
+            <FaWrench className="mr-4 text-red-500" />
             PROXY AUTO GARAGE
           </h1>
           <p className="mt-4 md:mt-8 text-lg md:text-xl">

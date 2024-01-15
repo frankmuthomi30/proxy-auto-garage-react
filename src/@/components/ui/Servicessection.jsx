@@ -49,7 +49,7 @@ const Services = () => {
       animate="visible"
     >
       <div className="container mx-auto text-center">
-        <motion.h2 className="text-3xl font-bold mb-8" variants={itemVariants}>
+        <motion.h2 className="text-3xl font-bold mb-8 text-white" variants={itemVariants}>
           Our Services
         </motion.h2>
         <motion.div
@@ -64,7 +64,7 @@ const Services = () => {
               variants={itemVariants}
               whileHover="hover"
             >
-              <div className="text-2xl text-red-600 mb-4">{service.icon}</div>
+              <div className="text-2xl text-red-600 mb-4 " >{service.icon}</div>
               <motion.h3 className="text-xl font-semibold mb-2">{service.title}</motion.h3>
               <motion.p className="text-gray-700">{service.description}</motion.p>
             </motion.div>

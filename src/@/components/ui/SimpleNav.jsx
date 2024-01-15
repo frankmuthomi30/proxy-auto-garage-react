@@ -20,13 +20,13 @@ export default function GarageNavbar() {
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
+            <div className="flex items-center justify-between h-28 mb-1">
 
               {/* Logo (left) */}
               <img
-                className="h-10 w-auto lg:h-16"
+                className="h-10 w-auto lg:h-16 rounded-md"
                 src={process.env.PUBLIC_URL + "/images/logo.png"}
-                alt="Your Garage Logo"
+                alt="Garage Logo"
               />
 
               {/* Mobile menu button */}
