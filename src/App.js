@@ -8,6 +8,7 @@ import Testimonials from './@/components/ui/Testimonials';
 import FAQs from './@/components/ui/Faqs';
 import Contacts from './@/components/ui/Contacts';
 import Footersection from './@/components/ui/Footersection';
+
 import { Link, Element } from 'react-scroll';
 import './index.css';
 import './Tailwind.css';
